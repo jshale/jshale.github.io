@@ -5,27 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Logging Tool</title>
     <link rel="manifest" href="public/src/manifest.json" />
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link rel="stylesheet" href="/public/src/css/stlye.css" />
+    <meta name="mobile-web-app-capable" content="yes" />
   </head>
   <body>
     <div class="Tabs">
       <a class="Tab selected">Logging Tool</a>
       <a href="public/checklist/index.html" class="Tab">Checklist</a>
     </div>
-    <form>
-      <div>
-        <button>Buy</button>
-        <button>Sell</button>
+    <form class="trade_entry_form">
+      <div class="button_group">
+        <input type="radio" id="buy" name="trade_type" checked />
+        <label class="buy left" for="buy">Buy</label>
+
+        <input type="radio" id="sell" name="trade_type" />
+        <label class="sell right" for="sell">Sell</label>
       </div>
-      <div>
+      <div class="input_container">
         <input type="number" name="" id="" placeholder="Entry" />
         <input type="number" name="" id="" placeholder="Stop" />
         <input type="number" name="" id="" placeholder="Take Profit" />
       </div>
-      <div>
-        <button>Win</button>
-        <button>Loss</button>
+      <div class="button_group">
+        <input type="radio" id="win" name="result" checked />
+        <label class="win left" for="win">Win</label>
+
+        <input type="radio" id="loss" name="result" />
+        <label class="loss right" for="loss">Loss</label>
       </div>
+      <div class="log_trade"><button>Log Trade</button></div>
     </form>
   </body>
 </html>
