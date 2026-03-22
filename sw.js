@@ -1,5 +1,6 @@
 const CACHE_NAME = "static";
 const urls = [
+  "/",
   "index.html",
   "sw.js",
   "/public/src/css/stlye.css",
@@ -17,7 +18,7 @@ self.addEventListener("install", function (event) {
 });
 
 self.addEventListener("fetch", function (event) {
-  event.respndWith(
+  event.respondWith(
     caches.match(event.request).then(function (response) {
       if (response) {
         return response;

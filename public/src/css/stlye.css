@@ -41,6 +41,7 @@ body {
   flex-direction: column;
   padding: 20px;
   appearance: textfield;
+  width: 100%;
 }
 
 .input_container input.entry:hover {
@@ -75,6 +76,7 @@ input {
 
 .button_group {
   display: flex;
+  width: 100%;
 }
 
 .button_group input {
@@ -90,7 +92,6 @@ input {
   text-align: center;
   cursor: pointer;
   color: #94999e;
-  width: 80px;
   height: 25px;
 }
 
@@ -147,18 +148,18 @@ input {
   border: solid 2px #3b4654;
 }
 
-.log_trade button {
+.log_trade_button {
   margin-top: 10px;
   background-color: #b79a63;
   color: #6b7c8f;
-  width: 150px;
   height: 30px;
+  width: 100%;
   border-radius: 50px;
   border: solid 1px #3b4654;
   font-family: monospace;
 }
 
-.log_trade button:hover {
+.log_trade_button:hover {
   margin-top: 10px;
   background-color: #ffbc40;
   border: solid;
