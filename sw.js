@@ -6,6 +6,7 @@ const urls = [
   "/public/src/js/app.js",
   "public/checklist/index.html",
 ];
+// Pre-caching the app shell for basic offline funcitionality
 self.addEventListener("install", function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
@@ -15,6 +16,12 @@ self.addEventListener("install", function (event) {
   );
 });
 
-self.addEventListener("fetch", (e) => {
-  e.respondWith(caches.match(e.request).then((res) => res || fetch(e.request)));
+self.addEventListener("fetch", function (event) {
+  event.respndWith(
+    caches.match(event.request).then(function (response) {
+      if (response) {
+        return response;
+      }
+    }),
+  );
 });
