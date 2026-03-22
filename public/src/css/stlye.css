@@ -9,6 +9,10 @@ body {
   font-family: monospace;
 }
 
+button {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .Tab.selected {
   color: #e6edf3;
   background-color: #344150;
