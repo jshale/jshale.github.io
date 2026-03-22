@@ -1,10 +1,16 @@
 const CACHE_NAME = "static";
-const urls = ["/"];
+const urls = [
+  "index.html",
+  "sw.js",
+  "/public/src/css/stlye.css",
+  "/public/src/js/app.js",
+  "public/checklist/index.html",
+];
 self.addEventListener("install", function (event) {
   event.waitUntil(
     caches.open(CACHE_NAME).then(function (cache) {
       console.log("Precaching app shell!");
-      cache.addAll;
+      cache.addAll(urls);
     }),
   );
 });
