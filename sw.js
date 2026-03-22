@@ -1,7 +1,12 @@
-const CACHE_NAME = "v1";
+const CACHE_NAME = "static";
 const urls = ["/"];
 self.addEventListener("install", function (event) {
-  event.waitUntil(caches.open(CACHE_NAME).then((cache) => cache.addAll(urls)));
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(function (cache) {
+      console.log("Precaching app shell!");
+      cache.addAll;
+    }),
+  );
 });
 
 self.addEventListener("fetch", (e) => {
