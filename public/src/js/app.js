@@ -6,6 +6,10 @@ if ("serviceWorker" in navigator) {
   });
 }
 
+button.addEventListener("click", function () {
+  this.blur();
+});
+
 tradeform = document.getElementById("tradeform");
 tradeform.addEventListener("submit", function (e) {
   e.preventDefault();
