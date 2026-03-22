@@ -13,9 +13,9 @@
       <a class="Tab selected">Logging Tool</a>
       <a href="public/checklist/index.html" class="Tab">Checklist</a>
     </div>
-    <form class="trade_entry_form">
+    <form class="trade_entry_form" id="tradeform" method="POST">
       <div class="button_group">
-        <input type="radio" id="buy" name="trade_type" checked />
+        <input type="radio" id="buy" name="trade_type" />
         <label class="buy left" for="buy">Buy</label>
 
         <input type="radio" id="sell" name="trade_type" />
@@ -33,7 +33,7 @@
         />
       </div>
       <div class="button_group">
-        <input type="radio" id="win" name="result" checked />
+        <input type="radio" id="win" name="result" />
         <label class="win left" for="win">Win</label>
 
         <input type="radio" id="loss" name="result" />

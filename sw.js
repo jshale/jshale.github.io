@@ -2,7 +2,6 @@ const CACHE_NAME = "static";
 const urls = [
   "/",
   "index.html",
-  "sw.js",
   "/public/src/css/stlye.css",
   "/public/src/js/app.js",
   "public/checklist/index.html",
@@ -22,6 +21,13 @@ self.addEventListener("fetch", function (event) {
     caches.match(event.request).then(function (response) {
       if (response) {
         return response;
+      } else {
+        return fetch(event.request).then(function (res) {
+          return caches.open("dynamic").then(function (cache) {
+            cache.put(event.request.url, res.clone());
+            return res;
+          });
+        });
       }
     }),
   );

@@ -13,6 +13,8 @@ body {
   color: #e6edf3;
   background-color: #344150;
   padding: 15px;
+  border: solid 1px #3b4654;
+  border-radius: 10px;
 }
 
 .trade_entry_form {
@@ -23,7 +25,8 @@ body {
   padding: 15px;
   border-radius: 6px;
   margin: 20px;
-  width: 20%;
+  width: 100%;
+  max-width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
