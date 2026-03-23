@@ -14,22 +14,30 @@
       <a href="/index.html" class="Tab">Logging Tool</a>
       <a class="Tab selected">Checklist</a>
     </div>
+
     <div class="main_container">
-      <div class="condition_container">
-        <button class="go_button">GO</button>
-        <p>Condition 1</p>
+      <div class="selection_container">
+        <select name="pair" id="pair">
+          <option value="EURUSD">EURUSD</option>
+          <option value="GBPUSD">GBPUSD</option>
+          <option value="AUDUSD">AUDUSD</option>
+        </select>
       </div>
       <div class="condition_container">
-        <button class="go_button">GO</button>
-        <p>Condition 2</p>
+        <button class="go_button">NO GO</button>
+        <p>BOS & Imbalance</p>
       </div>
       <div class="condition_container">
-        <button class="go_button">GO</button>
-        <p>Condition 3</p>
+        <button class="go_button">NO GO</button>
+        <p>HTF Alignment</p>
       </div>
       <div class="condition_container">
-        <button class="go_button">GO</button>
-        <p>Condition 4</p>
+        <button class="go_button">NO GO</button>
+        <p>Liquidity Sweep</p>
+      </div>
+      <div class="condition_container">
+        <button class="go_button">NO GO</button>
+        <p>71% Retracement</p>
       </div>
     </div>
     <script defer src="/public/src/js/app.js"></script>
