@@ -5,17 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Checklist</title>
     <link rel="manifest" href="../src/manifest.json" />
-    <link rel="stylesheet" href="/public/src/css/stlye.css" />
+    <link rel="stylesheet" href="/public/src/css/style.css" />
     <link rel="stylesheet" href="/public/src/css/checklist.css" />
     <meta name="mobile-web-app-capable" content="yes" />
   </head>
   <body>
     <div class="Tabs">
-      <a href="/index.html" class="Tab">Logging Tool</a>
-      <a class="Tab selected">Checklist</a>
+      <button class="tab_button left">Logging Tool</button>
+      <button class="tab_button active_tab right">Checklist</button>
     </div>
 
-    <div class="main_container">
+    <div class="checklist_container">
       <div class="selection_container">
         <select name="pair" id="pair">
           <option value="EURUSD">EURUSD</option>
