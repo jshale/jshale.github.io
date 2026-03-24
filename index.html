@@ -12,14 +12,19 @@
   </head>
   <body>
     <div class="Tabs">
-      <button class="tab_button active_tab left">Logging Tool</button>
-      <button class="tab_button right">Checklist</button>
+      <button class="tab_button active_tab left" id="logging">
+        Logging Tool
+      </button>
+      <button class="tab_button right" id="checklist">Checklist</button>
     </div>
 
     <form class="trade_entry_form active" id="tradeform" method="POST">
-      <select name="session_name" id="session_name">
-        <option value="placeholder">placeholder</option>
-      </select>
+      <div class="session_name_container">
+        <select name="session_name" class="session_name" id="session_name">
+          <option value="placeholder">placeholder</option>
+        </select>
+      </div>
+
       <div class="button_group">
         <input type="radio" id="buy" name="trade_type" />
         <label class="buy left" for="buy">Buy</label>
@@ -56,21 +61,23 @@
           <option value="AUDUSD">AUDUSD</option>
         </select>
       </div>
-      <div class="condition_container">
-        <button class="go_button">NO GO</button>
-        <p>BOS & Imbalance</p>
-      </div>
-      <div class="condition_container">
-        <button class="go_button">NO GO</button>
-        <p>HTF Alignment</p>
-      </div>
-      <div class="condition_container">
-        <button class="go_button">NO GO</button>
-        <p>Liquidity Sweep</p>
-      </div>
-      <div class="condition_container">
-        <button class="go_button">NO GO</button>
-        <p>71% Retracement</p>
+      <div class="checklist_item_container">
+        <div class="condition_container">
+          <button class="go_button">NO GO</button>
+          <p>BOS & Imbalance</p>
+        </div>
+        <div class="condition_container">
+          <button class="go_button">NO GO</button>
+          <p>HTF Alignment</p>
+        </div>
+        <div class="condition_container">
+          <button class="go_button">NO GO</button>
+          <p>Liquidity Sweep</p>
+        </div>
+        <div class="condition_container">
+          <button class="go_button">NO GO</button>
+          <p>71% Retracement</p>
+        </div>
       </div>
     </div>
 
