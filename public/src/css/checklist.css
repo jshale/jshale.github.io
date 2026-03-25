@@ -1,4 +1,8 @@
 .checklist_container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -38,7 +42,7 @@
 
 .condition_container_go {
   display: flex;
-  margin: 10px;
+  margin: 5px;
   border: solid 1px green;
   border-radius: 50px;
   background-color: rgb(116, 184, 132);

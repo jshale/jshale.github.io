@@ -1,4 +1,8 @@
 .trade_entry_form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   background-color: #2a3441;
   border: solid;
   border-color: #3b4654;

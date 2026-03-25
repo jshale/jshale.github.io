@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logging Tool</title>
+    <link rel="manifest" href="public/src/manifest.json" />
+    <link rel="stylesheet" href="/public/src/css/style.css" />
+    <link rel="stylesheet" href="/public/src/css/checklist.css" />
+    <link rel="stylesheet" href="/public/src/css/logging.css" />
+    <meta name="mobile-web-app-capable" content="yes" />
+  </head>
+  <body>
+    <div class="Tabs">
+      <button class="tab_button active_tab left" id="logging">
+        Logging Tool
+      </button>
+      <button class="tab_button right" id="checklist">Checklist</button>
+    </div>
+
+    <form class="trade_entry_form active" id="tradeform" method="POST">
+      <div class="session_name_container">
+        <select name="session_name" class="session_name" id="session_name">
+          <option value="placeholder">placeholder</option>
+        </select>
+      </div>
+
+      <div class="button_group">
+        <input type="radio" id="buy" name="trade_type" />
+        <label class="buy left" for="buy">Buy</label>
+
+        <input type="radio" id="sell" name="trade_type" />
+        <label class="sell right" for="sell">Sell</label>
+      </div>
+      <div class="input_container">
+        <input class="entry" type="number" name="" id="" placeholder="Entry" />
+        <input class="stop" type="number" name="" id="" placeholder="Stop" />
+        <input
+          class="tp"
+          type="number"
+          name=""
+          id=""
+          placeholder="Take Profit"
+        />
+      </div>
+      <div class="button_group">
+        <input type="radio" id="win" name="result" />
+        <label class="win left" for="win">Win</label>
+
+        <input type="radio" id="loss" name="result" />
+        <label class="loss right" for="loss">Loss</label>
+      </div>
+      <button class="log_trade_button">Log Trade</button>
+    </form>
+
+    <div class="checklist_container">
+      <div class="selection_container">
+        <select name="pair" id="pair">
+          <option value="EURUSD">EURUSD</option>
+          <option value="GBPUSD">GBPUSD</option>
+          <option value="AUDUSD">AUDUSD</option>
+        </select>
+      </div>
+      <div class="checklist_item_container">
+        <div class="condition_container">
+          <button class="go_button">NO GO</button>
+          <p>BOS & Imbalance</p>
+        </div>
+        <div class="condition_container">
+          <button class="go_button">NO GO</button>
+          <p>HTF Alignment</p>
+        </div>
+        <div class="condition_container">
+          <button class="go_button">NO GO</button>
+          <p>Liquidity Sweep</p>
+        </div>
+        <div class="condition_container">
+          <button class="go_button">NO GO</button>
+          <p>71% Retracement</p>
+        </div>
+      </div>
+    </div>
+
+    <script defer src="/public/src/js/app.js"></script>
+    <script defer src="/public/src/js/logging.js"></script>
+    <script defer src="/public/src/js/checklist.js"></script>
+  </body>
+</html>
