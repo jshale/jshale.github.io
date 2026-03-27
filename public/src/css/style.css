@@ -9,14 +9,11 @@ body {
   font-family: monospace;
 }
 
-[x-cloak] {
-  display: none !important;
-}
-
 .form_container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
-  position: relative;
-  height: 100vh;
 }
 
 .Tabs {

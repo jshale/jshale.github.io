@@ -15,26 +15,18 @@
 
     <meta name="mobile-web-app-capable" content="yes" />
   </head>
-  <body x-data="{activeTab: 'logging'}">
-    <div class="Tabs">
-      <button
-        @click="activeTab = 'logging'"
-        :class="{'active_tab': activeTab === 'logging'}"
-        class="tab_button left"
-        id="logging"
-      >
-        Logging Tool
-      </button>
-      <button
-        @click="activeTab = 'checklist'"
-        :class="{'active_tab': activeTab === 'checklist'}"
-        class="tab_button right"
-        id="checklist"
-      >
-        Checklist
-      </button>
-    </div>
-
+  <body>
+    <select name="pair" id="pair">
+      <optgroup label="Forex Majors">
+        <option value="EURUSD">EURUSD</option>
+        <option value="GBPUSD">GBPUSD</option>
+        <option value="USDJPY">USDJPY</option>
+        <option value="USDCHF">USDCHF</option>
+        <option value="USDCAD">USDCAD</option>
+        <option value="AUDUSD">AUDUSD</option>
+        <option value="NZDUSD">NZDUSD</option>
+      </optgroup>
+    </select>
     <div class="form_container">
       <form
         x-show="activeTab === 'logging'"
@@ -44,12 +36,6 @@
         x-transition.opacity
         x-cloak
       >
-        <div class="session_name_container">
-          <select name="session_name" class="session_name" id="session_name">
-            <option value="placeholder">placeholder</option>
-          </select>
-        </div>
-
         <div class="button_group">
           <input type="radio" id="buy" name="trade_type" />
           <label class="buy left" for="buy">Buy</label>
@@ -90,13 +76,6 @@
         x-transition.opacity
         x-cloak
       >
-        <div class="selection_container">
-          <select name="pair" id="pair">
-            <option value="EURUSD">EURUSD</option>
-            <option value="GBPUSD">GBPUSD</option>
-            <option value="AUDUSD">AUDUSD</option>
-          </select>
-        </div>
         <div class="checklist_item_container">
           <div
             x-data="{isGo: false}"
